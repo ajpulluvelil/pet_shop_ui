@@ -2,25 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { LoginRoutingModule } from './login-routing.module';
-import { LoginComponent } from './login/login.component';
-import { RegistrationComponent } from './registration/registration.component';
-
-import { MatInputModule } from '@angular/material/input';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 
 @NgModule({
   declarations: [
-    LoginComponent,
-    RegistrationComponent
+    UserRegistrationComponent,
+    UserLoginComponent
   ],
   imports: [
     CommonModule,
-    LoginRoutingModule,
-    MatInputModule,
-    FlexLayoutModule,
-    BrowserAnimationsModule
+    LoginRoutingModule
   ]
 })
 export class LoginModule { }
