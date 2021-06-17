@@ -15,8 +15,13 @@ export class UserLoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /** routing for registraion component */
   userRegistration() {
     this.router.navigate(['/login/user-registration']);
+  }
+
+  publicSitRoute() {
+    this.router.navigate(['/public-sit']);
   }
 
 }
