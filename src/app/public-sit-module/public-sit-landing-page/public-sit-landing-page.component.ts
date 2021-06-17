@@ -10,6 +10,7 @@ export class PublicSitLandingPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('home');
   }
 
 }

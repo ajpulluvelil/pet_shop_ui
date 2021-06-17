@@ -13,10 +13,28 @@ export class PublicSitNavigationComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.homeRoute();
   }
 
+  /** sample routing for login funtion */
   loginAuthentication() {
     this.router.navigate(['/login']);
+  }
+  /** sample routing for servces */
+  servicesRoute() {
+    this.router.navigate(['public-sit/services']);
+  }
+  /** sample routing for contact us */
+  contactUsRoute() {
+    this.router.navigate(['public-sit/contact-us']);
+  }
+  /** sample routing for about us */
+  aboutUsRoute() {
+    this.router.navigate(['public-sit/about-us']);
+  }
+  /** sample routing for home */
+  homeRoute() {
+    this.router.navigate(['public-sit/home']);
   }
 
 }
