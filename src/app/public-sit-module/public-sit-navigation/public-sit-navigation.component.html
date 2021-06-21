@@ -1,20 +1,27 @@
-<nav>
-    <ul class="nav-list">
-        <li class="nav-item">
-            <a (click)="homeRoute()">Home</a>
-        </li>
-        <li class="nav-item">
-            <a (click)="aboutUsRoute()">About Us</a>
-        </li>
-        <li class="nav-item">
-            <a (click)="contactUsRoute()">Contact Us</a>
-        </li>
-        <li class="nav-item">
-            <a (click)="servicesRoute()">Services</a>
-        </li>
-        <li class="nav-item">
-            <a (click)="loginAuthentication()">Login</a>
-        </li>
-    </ul>
-</nav>
+<div class="container">
+    <nav>
+        <div class="logo">
+            <h4>PET-SHOP</h4>
+        </div>
+        <ul class="nav-lists">
+            <li class="nav-item">
+                <a class="nav-links" (click)="homeRoute()">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-links" (click)="aboutUsRoute()">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-links" (click)="contactUsRoute()">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-links" (click)="servicesRoute()">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-links" (click)="loginAuthentication()">Login</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<!-- routing space for public-sit module -->
 <router-outlet></router-outlet>
