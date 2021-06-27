@@ -1,5 +1,16 @@
 .container {
     height: 92vh;
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(173, 175, 187);
+    background-image: url("../../../assets/images/petShopBackGroundImage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Inconsolata', monospace;
+}
+
+.wave {
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    opacity: 1;
 }
