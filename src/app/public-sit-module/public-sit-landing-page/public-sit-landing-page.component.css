@@ -2,6 +2,8 @@
     height: 92vh;
     background-color: rgb(173, 175, 187);
     background-image: url("../../../assets/images/petShopBackGroundImage.jpg");
+    height: 92vh;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Inconsolata', monospace;
@@ -13,4 +15,35 @@
     width: 100%;
     color: #fff;
     opacity: 1;
+}
+
+.content-container {
+    padding: 150px;
+}
+
+.content {
+    width: 25%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #3989b8;
+}
+
+.login-button {
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Inconsolata', monospace;
+}
+
+.welcome-text {
+    font-size: 28px;
+    font-weight: bolder;
+    color: rgb(218, 218, 219);
+    font-family: 'Inconsolata', monospace;
+}
+
+.content-text {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgb(218, 218, 219);
 }
