@@ -15,7 +15,7 @@ const routes: Routes = [
         ]},
         {
           path: 'questionnaire',
-          loadChildren: () => import('./admin-questionnaire/admin-questionnaire.module').then(mod => mod.AdminQuestionnaireModule)
+          loadChildren: () => import('./admin-questionnaire-module/admin-questionnaire.module').then(mod => mod.AdminQuestionnaireModule)
         },
       ]
   }
