@@ -33,6 +33,13 @@
     cursor: pointer;
     border-radius: 10px;
     font-family: 'Inconsolata', monospace;
+    padding: 10px 15px;
+    color: #3989b8;
+    background-color: #ecb44a;
+}
+
+.button-section {
+    padding-top: 20px;
 }
 
 .welcome-text {
