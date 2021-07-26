@@ -8,18 +8,16 @@ const routes: Routes = [
   {
     path: '',
     component: AdminNavigationComponent,
-    children: [
-      {
-        path: 'shop',
-        component: AdminSidebarComponent,
+    children: [{
+        path: 'shop', component: AdminSidebarComponent,
         children: [
-          {
-            path: 'dashboard',
-            component: AdminDashboardComponent
-          }
-        ]
-      }
-    ]
+          { path: 'dashboard', component: AdminDashboardComponent }
+        ]},
+        {
+          path: 'questionnaire',
+          loadChildren: () => import('./admin-questionnaire/admin-questionnaire.module').then(mod => mod.AdminQuestionnaireModule)
+        },
+      ]
   }
 ];
 
