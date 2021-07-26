@@ -5,6 +5,7 @@ import { QuestionnaireLandingComponent } from './questionnaire-landing/questionn
 import { QuestionnaireSectionComponent } from './questionnaire-section/questionnaire-section.component';
 import { QuestionnaireSectionQuestionComponent } from './questionnaire-section-question/questionnaire-section-question.component';
 import { QuestionnaireIntroductionComponent } from './questionnaire-introduction/questionnaire-introduction.component';
+import { AdminQuestionnaireRoutingModule } from './admin-questionnaire-routing.module';
 
 
 
@@ -17,7 +18,8 @@ import { QuestionnaireIntroductionComponent } from './questionnaire-introduction
     QuestionnaireIntroductionComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AdminQuestionnaireRoutingModule
   ]
 })
 export class AdminQuestionnaireModule { }
