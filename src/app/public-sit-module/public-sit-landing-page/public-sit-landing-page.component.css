@@ -54,3 +54,29 @@
     padding-bottom: 10px;
     color: rgb(218, 218, 219);
 }
+
+@media only screen and (max-width: 1366px) {
+    .content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 836px) {
+    .content {
+        width: 100%;
+    }
+
+    .content-container {
+        padding: 100px;
+    }
+}
+
+@media only screen and (max-width: 636px) {
+    .content {
+        width: 100%;
+    }
+
+    .content-container {
+        padding: 100px;
+    }
+}

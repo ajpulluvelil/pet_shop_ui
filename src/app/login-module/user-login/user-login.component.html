@@ -1,6 +1,28 @@
-<div class="container">
-    <div class="form-container">
-        <button class="fall-back" (click)="publicSitRoute()">Back</button>
-        <button class="user-registration" (click)="userRegistration()">Register</button>
-    </div>
-</div>
+<form [formGroup]='loginForm' onsubmit="validateLogin()">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>UserName</mat-label>
+        <input matInput formControlName="userName" placeholder="Username">
+        <mat-error *ngIf="loginForm.controls.userName.hasError('required')">
+            Username is <strong>required</strong>
+        </mat-error>
+        <mat-error *ngIf="loginForm.controls.userName.hasError('minLegth')">
+            minLegth is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+    </mat-form-field>
+    <button mat-raised-button color="primary">Login</button>
+
+    <button mat-icon-button type="submit" color="primary" (click)="publicSitRoute()">
+        <mat-icon>home</mat-icon>
+    </button>
+    
+    <button mat-raised-button color="primary" (click)="userRegistration()">Register</button>
+    
+</form>
