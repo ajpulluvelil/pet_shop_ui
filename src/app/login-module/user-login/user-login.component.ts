@@ -11,6 +11,7 @@ export class UserLoginComponent implements OnInit {
 
   loginForm = new FormGroup({
     userName: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    userPassword: new FormControl('', [Validators.required])
   });
   hide = true;
 
@@ -31,7 +32,11 @@ export class UserLoginComponent implements OnInit {
   }
 
   validateLogin() {
-    
+    const data = {
+      userName: this.loginForm.controls.userName.value,
+      userPassword: this.loginForm.controls.userPassword.value
+    }
+    console.log('login.data:-', data);
   }
 
 }

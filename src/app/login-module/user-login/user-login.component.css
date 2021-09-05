@@ -1,0 +1,24 @@
+.center-container {
+    background-image: url(../../../assets/images/petShopBackGroundImage.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.form-container {
+    min-width: 30%;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: rgb(166, 166, 173);
+}
+
+.form-field {
+    width: 100%;
+}
+
+.login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
