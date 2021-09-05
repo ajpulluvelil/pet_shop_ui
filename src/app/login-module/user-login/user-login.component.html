@@ -1,6 +1,40 @@
-<div class="container">
-    <div class="form-container">
-        <button class="fall-back" (click)="publicSitRoute()">Back</button>
-        <button class="user-registration" (click)="userRegistration()">Register</button>
-    </div>
+<div class="center-container">
+    <form class="form-container" [formGroup]='loginForm' (submit)="validateLogin()">
+        <div class="row">
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Enter you userName</mat-label>
+                <input matInput formControlName="userName" placeholder="Username">
+                <mat-error
+                    *ngIf="loginForm.controls.userName.hasError('required') && !loginForm.controls.userName.hasError('minLegth')">
+                    Username is <strong>required</strong>
+                </mat-error>
+                <mat-error
+                    *ngIf="loginForm.controls.userName.hasError('minLegth') && !loginForm.controls.userName.hasError('required')">
+                    minLegth is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Enter your password</mat-label>
+                <input matInput formControlName="userPassword" placeholder="password" [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+
+        <div class="row login-button">
+            <button mat-raised-button color="primary" [disabled]='!loginForm.valid'>Login</button>
+        </div>
+
+    </form>
+
+    <!-- <button mat-icon-button type="submit" color="primary" (click)="publicSitRoute()">
+        <mat-icon>home</mat-icon>
+    </button>
+    
+    <button mat-raised-button color="primary" (click)="userRegistration()">Register</button> -->
+
 </div>
