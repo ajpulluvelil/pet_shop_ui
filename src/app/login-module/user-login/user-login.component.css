@@ -20,5 +20,10 @@
 .login-button {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    padding: 0px 5px;
+}
+
+.back-button {
+    padding: 0px 5px;
 }
